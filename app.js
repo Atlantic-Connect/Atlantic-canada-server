@@ -164,16 +164,20 @@ app.get("/api/about_us", async (req, res) => {
   }
 });
 
+
+// Get All services on services page
 app.get("/api/services", async (req, res) => {
 
   try {
-    // Assuming you want to fetch all documents from the 'bank_name' collection
+    
     
     const data = await Services.find({});
     // console.log(data);
 
-    res.json(data);
-    // console.log("data fetching done")
+    res.send({
+      status:"success",
+      data: data
+    });
 
   } catch (error) {
     console.error('Error fetching data:', error);
