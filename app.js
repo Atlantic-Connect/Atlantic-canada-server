@@ -174,10 +174,7 @@ app.get("/api/services", async (req, res) => {
     const data = await Services.find({});
     // console.log(data);
 
-    res.send({
-      status:"success",
-      data: data
-    });
+    res.json(data);
 
   } catch (error) {
     console.error('Error fetching data:', error);
