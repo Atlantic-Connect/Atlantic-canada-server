@@ -144,15 +144,18 @@ const Services = mongoose.model('services', serviceSchema);
 
 
 
+// Aboutus page API CALL
 app.get("/api/about_us", async (req, res) => {
 
   try {
-    // Assuming you want to fetch all documents from the 'bank_name' collection
     
     const data = await about_us.find({});
     // console.log(data);
 
-    res.json(data);
+    res.send({
+      status:"success",
+      data: data
+    });
     // console.log("data fetching done")
 
   } catch (error) {
