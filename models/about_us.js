@@ -18,6 +18,6 @@ const aboutUsSchema = new Schema({
 });
 
 
-const about_us = mongoose.model('about_us', aboutusSchema);
+const about_us = mongoose.model('about_us', aboutUsSchema);
 
 module.exports = about_us;

@@ -149,7 +149,7 @@ app.get("/api/about_us", async (req, res) => {
 
   try {
 
-    const data = await about_us.findOne({});
+    const data = await about_us.find({});
     // console.log(data);
 
     res.send({
